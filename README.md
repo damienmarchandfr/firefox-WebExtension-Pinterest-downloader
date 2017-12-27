@@ -1,1 +1,1 @@
-[logo](https://raw.githubusercontent.com/damienmarchandfr/firefox-WebExtensions-Pinterest-downloader/develop/logo.png)
+![logo](https://raw.githubusercontent.com/damienmarchandfr/firefox-WebExtensions-Pinterest-downloader/develop/logo.png)
