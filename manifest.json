@@ -1,0 +1,22 @@
+{
+    "description": "Download in background all image from Pinterest",
+    "manifest_version": 2,
+    "name": "Pinterest Downloader for Firefox",
+    "version": "1.0",
+    "homepage_url": "https://github.com/damienmarchandfr/firefox-WebExtensions-Pinterest-downloader",
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.pinterest.fr/*"],
+        "js": ["./node_modules/jquery/dist/jquery.min.js","getUrls.js"]
+      }
+    ],
+    "permissions": [
+      "downloads"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
