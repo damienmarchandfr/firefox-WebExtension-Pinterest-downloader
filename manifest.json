@@ -5,7 +5,7 @@
     "version": "1.0",
     "homepage_url": "https://github.com/damienmarchandfr/firefox-WebExtensions-Pinterest-downloader",
     "icons": {
-      "48": "icons/border-48.png"
+      "48": "./logo.png"
     },
     "content_scripts": [
       {

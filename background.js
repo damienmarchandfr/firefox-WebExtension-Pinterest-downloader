@@ -3,7 +3,7 @@ browser.runtime.onMessage.addListener(function(message) {
     console.log('Try to download file : '+uri)
     var downloading = browser.downloads.download({
         url : uri,
-        conflictAction : 'uniquify'
+        conflictAction : 'overwrite'
     });
     downloading
 })
