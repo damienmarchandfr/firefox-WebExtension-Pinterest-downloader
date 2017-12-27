@@ -1,0 +1,1 @@
+[logo](https://github.com/damienmarchandfr/firefox-WebExtensions-Pinterest-downloader/blob/develop/logo.png)

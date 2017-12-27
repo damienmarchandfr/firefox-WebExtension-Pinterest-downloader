@@ -5,9 +5,5 @@ browser.runtime.onMessage.addListener(function(message) {
         url : uri,
         conflictAction : 'uniquify'
     });
-    downloading.then(function(id){
-        console.log(id)
-    },function(error){
-        console.log(error)
-    })
+    downloading
 })
