@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+css-toggle-switch@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/css-toggle-switch/-/css-toggle-switch-4.1.0.tgz#b4ba42856194bc0bdea610ab37c8d38d44d21d4f"
+
 jquery@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"

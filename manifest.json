@@ -24,6 +24,8 @@
       "19": "./logo.png",
       "38": "./logo.png"
     },
-    "default_title": "Pinterest downloader"
+    "default_title": "Pinterest downloader",
+    "default_popup": "states.html",
+    "browser_style": true
   }
 }
