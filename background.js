@@ -1,9 +1,31 @@
+var urls = {}
+var mustDownload;
+
 browser.runtime.onMessage.addListener(function(message) {
-    const uri = message.uri
-    console.log('Try to download file : '+uri)
-    var downloading = browser.downloads.download({
-        url : uri,
-        conflictAction : 'overwrite'
-    });
-    downloading
+
+    if(message.state){
+        if(message.state === 'on'){
+            mustDownload = true
+        }else{
+            mustDownload = false
+        }
+    } 
+    if(message.uri && mustDownload === true){
+        const uri = message.uri
+        if(!urls[uri]){
+            urls[uri] = false
+        }
+        //search url to download
+        Object.keys(urls).forEach(function(key){
+            if(urls[key] === false){
+                urls[key] = true
+                var downloading = browser.downloads.download({
+                    url : key,
+                    conflictAction : 'overwrite'
+                });
+                downloading    
+            }
+        })     
+    }
+    
 })

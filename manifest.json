@@ -14,7 +14,7 @@
       }
     ],
     "permissions": [
-      "downloads"
+      "downloads","storage"
   ],
   "background": {
     "scripts": ["background.js"]
@@ -27,5 +27,11 @@
     "default_title": "Pinterest downloader",
     "default_popup": "states.html",
     "browser_style": true
+  },
+  "applications": {
+    "gecko": {
+      "id": "app@damienmarchand.fr",
+      "strict_min_version": "1.0"
+    }
   }
 }

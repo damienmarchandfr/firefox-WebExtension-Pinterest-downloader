@@ -1,7 +1,6 @@
 
-var urls = {}
-
 function refresh(){
+    console.log('toto')
     setTimeout(function(){ 
         //call to get all urls
         $('._vq').each(function( ) {
@@ -10,16 +9,7 @@ function refresh(){
              
             if(img){
                 var uri = img.split(',')[img.split(',').length-1].split(' ')[1]
-                if(!urls[uri]){
-                    urls[uri] = false
-                }
-                //search url to download
-                Object.keys(urls).forEach(function(key){
-                    if(urls[key] === false){
-                        urls[key] = true
-                        browser.runtime.sendMessage({uri : key})     
-                    }
-                })
+                browser.runtime.sendMessage({uri : uri})
             }
           });
         refresh();
