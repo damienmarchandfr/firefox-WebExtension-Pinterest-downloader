@@ -1,19 +1,17 @@
-var state = 'off';
 
 browser.storage.local.get()
     .then(function(res){
         if(!res.state){
             $('#switch').prop('checked', false);
-            state = 'off'
             return browser.storage.local.set({
                 state : 'off'
             });
         }else{
             if(res.state === 'off'){
-                state = 'off'
+                browser.runtime.sendMessage({state : 'off'})
                 $('#switch').prop('checked', false);
             }else{
-                state = 'on'
+                browser.runtime.sendMessage({state : 'on'})
                 $('#switch').prop('checked', true);
             }
         }      

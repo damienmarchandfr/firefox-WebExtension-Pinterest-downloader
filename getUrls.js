@@ -1,7 +1,7 @@
 
 function refresh(){
-    console.log('toto')
     setTimeout(function(){ 
+        
         //call to get all urls
         $('._vq').each(function( ) {
             var element = $( this )
