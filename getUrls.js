@@ -1,7 +1,6 @@
 
 function refresh(){
     setTimeout(function(){ 
-        
         //call to get all urls
         $('._vq').each(function( ) {
             var element = $( this )
