@@ -1,15 +1,29 @@
 var urls = {}
-var downloads = []
 var mustDownload;
+var count = 0;
+var ids = []
+
+browser.downloads.onCreated.addListener(function(d){
+    var id = d.id
+    if(ids.indexOf(id) === -1){
+        ids.push(id)
+    }
+    browser.runtime.sendMessage({count : ids.length})
+
+})
 
 browser.runtime.onMessage.addListener(function(message) {
 
     if(message.state){
         if(message.state === 'on'){
             mustDownload = true
+            ids = []
+            browser.runtime.sendMessage({count : ids.length})
         }else{
             mustDownload = false
             urls = {}
+            ids = []
+            browser.runtime.sendMessage({count : ids.length})
         }
     } 
     if(message.uri && mustDownload === true){
@@ -25,13 +39,6 @@ browser.runtime.onMessage.addListener(function(message) {
                     url : key,
                     conflictAction : 'overwrite'
                 });
-                browser.downloads.onCreated.addListener(function(d){
-                    downloads.push(d)
-                })  
-                browser.downloads.onChanged.addListener(function(){
-                    console.log('On change')
-                    console.log(arguments)
-                })
                 downloading  
 
             }
