@@ -22,6 +22,7 @@ In firefox URL
 
 Load manifest.json file
 
-
+![capture]
+(https://img15.hostingpics.net/pics/134505Capturede769cran20171230a768021416.png)
 
 

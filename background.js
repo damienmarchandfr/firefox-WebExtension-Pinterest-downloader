@@ -40,7 +40,6 @@ browser.runtime.onMessage.addListener(function(message) {
                     conflictAction : 'overwrite'
                 });
                 downloading  
-
             }
         })     
     }
