@@ -7,3 +7,21 @@ This web extension download all HD images from Pinterest during your navigation 
 
 I create this app to learn web extension creation. It may be bugged :)
 
+Install
+-------
+
+    yarn
+   
+   or
+
+    npm install
+
+In firefox URL
+
+> about:debugging
+
+Load manifest.json file
+
+
+
+
