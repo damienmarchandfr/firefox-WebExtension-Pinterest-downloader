@@ -41,7 +41,7 @@ $('#switch').change(function() {
 browser.runtime.onMessage.addListener(function(message){
     if(typeof message.count !== 'undefined'){
        $('#count').empty() 
-       $('#count').append(message.count)
+       $('#count').append('</span><i class="fa fa-download" id="downloads" aria-hidden="true"></i>'+message.count)
     }
 })
 
