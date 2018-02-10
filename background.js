@@ -13,7 +13,6 @@ browser.downloads.onCreated.addListener(function(d){
 })
 
 browser.runtime.onMessage.addListener(function(message) {
-
     if(message.state){
         if(message.state === 'on'){
             mustDownload = true
