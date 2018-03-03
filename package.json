@@ -1,7 +1,12 @@
 {
   "name": "firefox-web-extension-pinterest-downloader",
-  "description" : "Firefox web extension used to download all images from Pinterest during your navigation",
-  "keywords": ["firefox","download","image","pinterest"],
+  "description": "Firefox web extension used to download all images from Pinterest during your navigation",
+  "keywords": [
+    "firefox",
+    "download",
+    "image",
+    "pinterest"
+  ],
   "author": {
     "email": "damien-marchand@outlook.fr",
     "name": "Damien Marchand"
@@ -10,8 +15,6 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
-    "knacss": "^7.0.1"
+    "jquery": "^3.2.1"
   }
 }
